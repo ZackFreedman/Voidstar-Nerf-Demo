@@ -44,7 +44,7 @@ void setup() {
   isArmed = wasArmed = readArmedSensor();
   magIsInserted = magWasInserted = readMagSensor();
 
-  if (magIsInserted) ammoLeft = defaultMagSize; // TODO: Detect how much ammo is left in the mag
+  if (magIsInserted) ammoLeft = magSize = defaultMagSize; // TODO: Detect how much ammo is left in the mag
 
 #ifdef CONFIGURE_RN4X
   bluetooth.print("$$$"); // Put RN4X into command mode
